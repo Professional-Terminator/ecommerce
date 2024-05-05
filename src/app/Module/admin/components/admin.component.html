@@ -1,0 +1,43 @@
+
+<!-- <div class="flex items-center h-screen">
+    <div class="h-full w-[20%] border border-r-gray-500">
+        <p class="py-20">Navigation</p>
+    </div>
+    <div class="w-[80%]">
+        <router-outlet/>
+    </div>
+
+</div> -->
+<div class="flex items-center h-screen bg-gray-800">
+    <div class="h-full w-[20%] bg-gray-800 shadow-lg">
+        <p class="text-xl font-semibold text-gray-800 p-6 border-b border-gray-200">Admin Panel</p>
+        <ul class="flex flex-col">
+            <li>
+                <a routerLink="/admin" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Dashboard</a>
+            </li>
+            <!-- <li>
+                <a routerLink="/admin/orders" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Orders</a>
+            </li> -->
+            <li>
+                <a routerLink="/admin/products" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Products</a>
+            </li>
+            <li>
+                <a routerLink="/admin/brand" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Brands</a>
+            </li>
+            <li>
+                <a routerLink="/admin/category" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Category</a>
+            </li>
+            <!-- <li>
+                <a routerLink="/admin/customers" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Customers</a>
+            </li> -->
+            <li>
+                <a routerLink="/admin/products/create" class="block py-4 px-6 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors duration-300">Create Product</a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-[80%] bg-gray-800 overflow-auto">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

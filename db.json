@@ -1,0 +1,44 @@
+{
+  "category": [
+    {
+      "id": "123123124",
+      "categoryName": "drink"
+    }
+  ],
+  "brands": [
+    {
+      "id": "fa916889-5291-4ee6-85c0-f91eb368e20d",
+      "brandName": "coca cola",
+      "categoryId": "123123124"
+    },
+    {
+      "id": "85f0d6a1-4e9b-4dba-a7b0-27b7b8f600e9",
+      "brandName": "Pepsi",
+      "categoryId": "123123124"
+    }
+  ],
+  "products": [
+    {
+      "id": "6fc8cffb-39e7-489f-b6e2-2851141bd32a",
+      "imageUrl": "https://static-01.daraz.pk/p/3edd83c6f7c39417973626c90fbd1ffd.jpg_300x0q75.webp",
+      "brandId": "fa916889-5291-4ee6-85c0-f91eb368e20d",
+      "title": "Coca cola 2.25L ",
+      "color": "red",
+      "categoryId": "123123124",
+      "description": "This is available in different variants ",
+      "price": 122,
+      "quantity": 1212
+    },
+    {
+      "id": "05636e05-3866-4ab8-b1dc-b04c1ddc9055",
+      "imageUrl": "https://static-01.daraz.pk/p/4f91b60a845a8d161dc8fb74ccbf9168.jpg_300x0q75.webp",
+      "brandId": "fa916889-5291-4ee6-85c0-f91eb368e20d",
+      "title": "205ml pack of 12",
+      "color": "blue",
+      "categoryId": "123123124",
+      "description": "This is the pack of 12. Buy it for friends party",
+      "price": 1289,
+      "quantity": 1222
+    }
+  ]
+}

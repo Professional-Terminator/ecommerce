@@ -1,0 +1,100 @@
+<div class="max-w-7xl mx-auto bg-gray-800 shadow-lg rounded-lg my-6 overflow-hidden">
+    <table mat-table [dataSource]="dataSource" class="min-w-full divide-y divide-gray-200">
+  
+      <!-- Image URL Column -->
+      <ng-container matColumnDef="imageUrl">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Image
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          <img [src]="element.imageUrl" alt="Product Image" class="w-16 h-16 rounded-full">
+        </td>
+      </ng-container>
+  
+      <!-- Brand Column -->
+      <ng-container matColumnDef="brand">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Brand
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.brandName }}
+        </td>
+      </ng-container>
+  
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Title
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.title }}
+        </td>
+      </ng-container>
+  
+      <!-- Color Column -->
+      <ng-container matColumnDef="color">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Color
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.color }}
+        </td>
+      </ng-container>
+  
+      <!-- Category Column -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Category
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.categoryName }}
+        </td>
+      </ng-container>
+  
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Description
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.description }}
+        </td>
+      </ng-container>
+  
+      <!-- Price Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Price
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.price | currency }}
+        </td>
+      </ng-container>
+  
+      <!-- Quantity Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Quantity
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.quantity }}
+        </td>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+          Actions
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          <button (click)="editProduct(element.id)" class="text-blue-500 hover:text-blue-700 px-2 mr-2"><mat-icon>edit</mat-icon></button>
+          <button (click)="deleteProduct(element.id)" class="text-red-500 hover:text-red-700 px-2"><mat-icon>delete</mat-icon></button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="hover:bg-gray-400"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="bg-gray-50 py-2"></mat-paginator>
+  </div>
+  

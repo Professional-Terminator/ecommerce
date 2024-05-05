@@ -1,0 +1,53 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Image URL</mat-label>
+        <input matInput formControlName="imageUrl" class="mt-1 block w-full">
+        <mat-icon matSuffix>link</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Brand Name</mat-label>
+        <mat-select formControlName="brandId">
+          <mat-option *ngFor="let brand of brands" [value]="brand.id">
+            {{ brand.brandName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" class="mt-1 block w-full">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Color</mat-label>
+        <input matInput formControlName="color" class="mt-1 block w-full">
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="categoryId">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.categoryName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" class="mt-1 block w-full"></textarea>
+    </mat-form-field>
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price" type="number" min="0" class="mt-1 block w-full">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Quantity</mat-label>
+        <input matInput formControlName="quantity" type="number" min="0" class="mt-1 block w-full">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit" class="w-full mt-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">
+      Submit
+    </button>
+  </form>
+  

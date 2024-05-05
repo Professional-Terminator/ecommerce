@@ -1,0 +1,14 @@
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Category Name</mat-label>
+      <input matInput formControlName="categoryName" class="mt-1 block w-full">
+    </mat-form-field>
+  </div>
+  
+  <button mat-raised-button color="primary" type="submit" class="w-full mt-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white">
+    {{ isEdit ? 'Update Category' : 'Add Category' }}
+  </button>
+</form>
+
+  

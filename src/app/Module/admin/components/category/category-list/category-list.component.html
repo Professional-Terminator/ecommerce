@@ -1,0 +1,28 @@
+<div class="max-w mx-auto bg-gray-800 shadow-lg rounded-lg my-6 overflow-hidden">
+    <table mat-table [dataSource]="dataSource" class="min-w-full divide-y divide-gray-200">
+      <!-- Brand Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-50 uppercase tracking-wider">
+          Name
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          {{ element.categoryName }}
+        </td>
+    </ng-container>
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="px-5 py-3 bg-gray-50 text-left text-xs font-semibold text-gray-50 uppercase tracking-wider">
+          Actions
+        </th>
+        <td mat-cell *matCellDef="let element" class="px-5 py-4">
+          <button (click)="editCategory(element.id)" class="text-blue-500 hover:text-blue-700 px-2 mr-2"><mat-icon>edit</mat-icon></button>
+          <button (click)="deleteCategory(element.id)" class="text-red-500 hover:text-red-700 px-2"><mat-icon>delete</mat-icon></button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="hover:bg-gray-400"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="bg-gray-50 py-2"></mat-paginator>
+  </div>
+  

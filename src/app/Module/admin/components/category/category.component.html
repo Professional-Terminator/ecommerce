@@ -1,0 +1,13 @@
+<div class="max-w-7xl mx-auto bg-white shadow-lg rounded-lg my-6 overflow-hidden">
+    <!-- Container for the title and toggle button -->
+    <div class="px-6 py-4 flex justify-between items-center">
+        <h2 class="text-xl font-bold text-gray-800">Category Management</h2>
+        <!-- Update Button to navigate instead of toggle -->
+        <button (click)="!isCategoryAdd ? openAddCategoryForm() : openCategoryList()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            {{ !isCategoryAdd ? 'Add Category' : 'Category List' }}
+        </button>
+    </div>
+
+    <!-- Router Outlet to render the routed component -->
+    <router-outlet></router-outlet>
+</div>
