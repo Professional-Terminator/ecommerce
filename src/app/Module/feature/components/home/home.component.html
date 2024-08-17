@@ -3,10 +3,9 @@
         <app-main-carousel/>
     </div>
     <div>
-        <app-product-slider  title="Men's Jeans" [products]="menJeans"/>
-        <app-product-slider  title="women's Gouns" [products]="womenGouns"/>
-        <app-product-slider  title="Lehnga choli" [products]="lehngaCholi"/>
-        <app-product-slider  title="Men's Kurta"[products]="menKurta"/>
-        <app-product-slider  title="Shoes" [products]="shoes"/>
+        <div *ngFor="let brand of brandsWithProducts">
+            <app-product-slider [title]="brand.brandName" [products]="brand.products"></app-product-slider>
+         </div>
+
     </div>
 </div>

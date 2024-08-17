@@ -1,8 +1,25 @@
 {
+  "admin":[
+    {
+      "id":"123asd456fgh",
+      "name":"saqib",
+      "email": "saqib@test.com",
+      "password": "saqib@123"
+    }
+  ],
+
   "category": [
     {
       "id": "123123124",
       "categoryName": "drink"
+    },
+    {
+      "id": "a30c4660-69f8-4ec4-8edd-535e5698b9d7",
+      "categoryName": "Snacks"
+    },
+    {
+      "id": "42afae5e-f455-4f28-b9e5-f75f8d393ea4",
+      "categoryName": "Oils"
     }
   ],
   "brands": [
@@ -15,6 +32,16 @@
       "id": "85f0d6a1-4e9b-4dba-a7b0-27b7b8f600e9",
       "brandName": "Pepsi",
       "categoryId": "123123124"
+    },
+    {
+      "id": "a4ce7694-273d-4018-ad9e-92fb9d2fe833",
+      "brandName": "Lays",
+      "categoryId": "a30c4660-69f8-4ec4-8edd-535e5698b9d7"
+    },
+    {
+      "id": "e4386e79-b6ff-4f81-9b67-3dc89749c0d8",
+      "brandName": "KTC",
+      "categoryId": "42afae5e-f455-4f28-b9e5-f75f8d393ea4"
     }
   ],
   "products": [
@@ -39,6 +66,28 @@
       "description": "This is the pack of 12. Buy it for friends party",
       "price": 1289,
       "quantity": 1222
+    },
+    {
+      "id": "5c722c7c-55d3-4f9b-82e6-028e5ac74b44",
+      "imageUrl": "https://static-01.daraz.pk/p/3edd83c6f7c39417973626c90fbd1ffd.jpg_300x0q75.webp",
+      "brandId": "a4ce7694-273d-4018-ad9e-92fb9d2fe833",
+      "title": "Lays",
+      "color": "red",
+      "categoryId": "a30c4660-69f8-4ec4-8edd-535e5698b9d7",
+      "description": "this is pack of lays",
+      "price": 100,
+      "quantity": 100
+    },
+    {
+      "id": "abea7f0f-d112-4195-8f87-c378e29f0afe",
+      "imageUrl": "https://static-01.daraz.pk/p/4438e2313c96f20b815bee30eac3576b.png_200x200q80.jpg_.webp",
+      "brandId": "85f0d6a1-4e9b-4dba-a7b0-27b7b8f600e9",
+      "title": "Pepsi zero suger pack of 12",
+      "color": "sal",
+      "categoryId": "123123124",
+      "description": "asjkfaksdjnvoidiocancjklaoiedfhoiaxncoidjcionx vikuaodicnkxnquilcdhk asiocnasdkljn",
+      "price": 960,
+      "quantity": 100
     }
   ]
 }

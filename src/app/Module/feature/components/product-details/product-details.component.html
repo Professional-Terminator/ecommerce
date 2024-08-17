@@ -3,24 +3,24 @@
   <section class="lg:grid grid-cols-3 lg:gap-10">
     <div class="col-span-2 flex items-center flex-col">
       <img
-        src="https://rukminim1.flixcart.com/image/612/612/xif0q/ethnic-set/2/l/r/
-l-6909-blue-libas-original-imafygzxftqzszfx-bb.jpeg?q=70"
+        [src]="product.imageUrl"
         alt=""
       />
     </div>
     <div class="col-span-1 space-y-10 mt-10 lg:mt-0">
       <div class="space-y-2">
-        <p class="font-semibold text-gray-500 text-lg">LIBAS</p>
-        <p class="text-xl">Women Kurta and Palazzo Set Cotton Blend</p>
+        <p class="font-semibold text-gray-500 text-lg">{{product.brandId | brnadName | async }}</p>
+        <p class="text-xl">{{product.title}}</p>
       </div>
 
       <div class="flex items-center space-x-5">
-        <p class="text-lg">PKR 1,082</p>
-        <p class="text-lg text-gray-700 line-through">PKR 2,799</p>
-        <p class="text-green-400 font-semibold text-lg">30%</p>
+        <p class="text-lg">PKR {{product.price}}</p>
+        <p class="text-lg text-gray-700 line-through"></p>
+        <p class="text-green-400 font-semibold text-lg"></p>
       </div>
 
-      <div>
+      <!-- currently not applicable -->
+      <!-- <div>
         <p class="text-lg font-semibold">Size</p>
         <mat-radio-group
           class="space-x-5"
@@ -32,38 +32,30 @@ l-6909-blue-libas-original-imafygzxftqzszfx-bb.jpeg?q=70"
           <mat-radio-button value="L"><span>L</span></mat-radio-button>
           <mat-radio-button value="XL"><span>XL</span></mat-radio-button>
         </mat-radio-group>
-      </div>
+      </div> -->
 
       <div>
+        <!-- (click)="handleAddToCart()" -->
         <button
           style="padding: 1.5rem"
           class="w-full"
-          (click)="handleAddToCart()"
+          
           mat-raised-button
         >
-          Add to cart
+          Contact Us to Buy
         </button>
       </div>
 
       <div>
         <p class="text-gray-600">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-          dolorem officia obcaecati dolore, quibusdam enim ullam autem maiores
-          libero fugit voluptatum error minus tenetur voluptates! Dolore sint
-          rerum quae! Voluptas?
-        </p>
-
-        <p class="text-gray-600">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-          dolorem officia obcaecati dolore, quibusdam enim ullam autem maiores
-          libero fugit voluptatum error minus tenetur voluptates! Dolore sint
-          rerum quae! Voluptas?
+         {{product.description}}
         </p>
       </div>
     </div>
   </section>
 
-  <section class="pt-20 pb-10 px-5 lg:px-20">
+  <!-- Product Ratings and Reviews not related to this template -->
+  <!-- <section class="pt-20 pb-10 px-5 lg:px-20">
     <h1 class="font-semibold text-lg pb-4">Recent Reviews and Ratings</h1>
 
     <div class="border border-[#1a1a1a] rounded-md p-5">
@@ -177,7 +169,7 @@ l-6909-blue-libas-original-imafygzxftqzszfx-bb.jpeg?q=70"
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <section class="mt-10">

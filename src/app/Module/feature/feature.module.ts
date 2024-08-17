@@ -24,9 +24,16 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
+import { LoginComponent } from './components/login/login.component';
+
+
+
+
+
 
 @NgModule({
   declarations: [
+    
     FeatureComponent,
     HomeComponent,
     MainCarouselComponent,
@@ -41,7 +48,8 @@ import { AddressFormComponent } from './components/checkout/address-form/address
     OrderComponent,
     OrderDetailsComponent,
     ProductReviewCardComponent,
-    AddressFormComponent
+    AddressFormComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

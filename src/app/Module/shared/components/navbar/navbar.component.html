@@ -14,7 +14,18 @@
       <div class="">
         <div class="flex items-center space-x-4">
           <a routerLink="/" class="text-gray-800 "> Shop with Mughal</a>
-          <div>
+          <span *ngFor="let category of categories">
+         <div>
+            <button
+              class="open-button"
+              (click)="openNavbarContent(category.id)"
+              mat-button
+            >
+              {{category.categoryName| uppercase}}
+            </button>
+          </div>
+          </span>
+          <!-- <div>
             <button
               class="open-button"
               (click)="openNavbarContent('men')"
@@ -31,7 +42,7 @@
             >
               Women
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -41,10 +52,10 @@
         <mat-icon>shopping_cart</mat-icon>
       </button>
 
-      <button *ngIf="false" mat-raised-button type="" color="accent">
+      <button *ngIf="isLogin == false" mat-raised-button type="" color="accent" (click)="openLoginDialog()">
         Login
       </button>
-      <div *ngIf="true" class="relative ml-3 flex item-center">
+      <div *ngIf="isLogin" class="relative ml-3 flex item-center">
         <div class="flex items-center space-x-5">
           <span class="font-bold text-lg">Saqib</span>
           <button mat-button [matMenuTriggerFor]="profileMenu">

@@ -59,7 +59,11 @@ export class HttpServiceService {
     getBrandById(id: string): Observable<Brand> {
       return this.http.get<Brand>(`${this.apiUrl}/${this.brands}/${id}`);
     }
-    
+    getBrandByCategoryId(categoryId: string): Observable<Brand[]> {
+      return this.http.get<Brand[]>(`${this.apiUrl}/${this.brands}`).pipe(
+        map(brands => brands.filter(brand => brand.categoryId === categoryId))
+      );
+    }
     updateBrand(category: Brand): Observable<Brand> {
       return this.http.put<Brand>(`${this.apiUrl}/${this.brands}/${category.id}`, category);
     }
@@ -94,5 +98,17 @@ export class HttpServiceService {
     }
     deleteProduct(id: number | string): Observable<any> {
       return this.http.delete(`${this.apiUrl}/${this.products}/${id}`);
+    }
+
+    getProductsByBrandId(brandId: string): Observable<Product[]> {
+      return this.http.get<Product[]>(`${this.apiUrl}/${this.products}`).pipe(
+        map(products => products.filter(product => product.brandId === brandId))
+      );
+    }
+
+    getProductByCategoryId(categoryId: string): Observable<Product[]>{
+      return this.http.get<Product[]>(`${this.apiUrl}/${this.products}`).pipe(
+        map(products => products.filter(product => product.categoryId === categoryId))
+      );
     }
 }
