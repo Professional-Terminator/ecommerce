@@ -14,8 +14,8 @@
       <div class="">
         <div class="flex items-center space-x-4">
           <a routerLink="/" class="text-gray-800 "> Shop with Mughal</a>
-          <span *ngFor="let category of categories">
-         <div>
+          <span *ngFor="let category of categories" >
+         <div *ngIf="isLogin === false">
             <button
               class="open-button"
               (click)="openNavbarContent(category.id)"
@@ -68,7 +68,7 @@
           <mat-menu #profileMenu="matMenu">
             <button mat-menu-item>Orders</button>
             <button mat-menu-item>Profile</button>
-            <button mat-menu-item>Logout</button>
+            <button mat-menu-item (click)="logout()">Logout</button>
           </mat-menu>
         </div>
       </div>

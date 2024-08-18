@@ -13,9 +13,10 @@ import { CategoryListComponent } from './components/category/category-list/categ
 import { CreateBrandComponent } from './components/brands/create-brand/create-brand.component';
 import { ListBrandComponent } from './components/brands/list-brand/list-brand.component';
 import { ProductListComponent } from './components/create-product/product-list/product-list.component';
+import { authGuard } from 'src/app/guards/auth.guard';
 
 const routes: Routes = [
-  {path:"", component:AdminComponent, children:[
+  {path:"", component:AdminComponent, canActivate: [authGuard], children:[
     {path:"", component:DashboardComponent},
     {path:"admin/orders", component:OrdersTableComponent},
     {path:"admin/products", component:AdminProductsComponent,

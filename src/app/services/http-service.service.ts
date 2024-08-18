@@ -13,8 +13,18 @@ export class HttpServiceService {
   private category = 'category';
   private brands = 'brands';
   private products = 'products';
+  private admin = "admin";
 
   constructor(private http: HttpClient) {}
+
+  login(username: string, password: string): Observable<boolean> {
+    return this.http.get<any[]>(`${this.apiUrl}/${this.admin}`).pipe(
+      map(users => {
+        const user = users.find(u => u.name === username && u.password === password);
+        return !!user; // Returns true if user is found, otherwise false
+      })
+    );
+  }
 
     addCategory(category: Category): Observable<Category> {
       return this.http.post<Category>(`${this.apiUrl}/${this.category}`, category);

@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Route, Router } from '@angular/router';
 import { LoginComponent } from 'src/app/Module/feature/components/login/login.component';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 
@@ -16,7 +17,7 @@ export class NavbarComponent  {
 
   categories!: any[];
 
-  constructor(private http_service: HttpServiceService, public dialog: MatDialog){}
+  constructor(private http_service: HttpServiceService, public dialog: MatDialog, private router: Router){}
 
 ngOnInit(): void {
   this.loadCategories();
@@ -27,7 +28,9 @@ openLoginDialog(){
   const dialogRef = this.dialog.open(LoginComponent);
 
   dialogRef.afterClosed().subscribe(result => {
-    console.log('The dialog was closed');
+      this.isLogin = localStorage.getItem('isLoggedIn') === 'true';
+   
+    console.log('The dialog was closed', this.isLogin);
   });
 }
 
@@ -70,6 +73,12 @@ openLoginDialog(){
     }
   }
 
+  logout(){
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('username');
+    this.isLogin = false;
+    this.router.navigate(['/'])
+  }
 }
 
  
