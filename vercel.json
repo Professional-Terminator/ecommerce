@@ -19,8 +19,8 @@
           "destination": "/index.html"
         },
         {
-            "src": "/api/(.*)",
-            "dest": "/api/json-server.js"
+            "source": "/api/(.*)",
+            "destination": "/api/json-server.js"
           }
       ],
     "cleanUrls": true,
