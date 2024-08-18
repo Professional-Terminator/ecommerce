@@ -7,13 +7,21 @@
       "config": {
         "distDir": "dist/ecommerce_frontend"
       }
-    }
+    },
+    {
+        "src": "api/json-server.js",
+        "use": "@vercel/node"
+      }
   ],
     "rewrites": [
         {
           "source": "/(.*)",
           "destination": "/index.html"
-        }
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/json-server.js"
+          }
       ],
     "cleanUrls": true,
     "trailingSlash": false
