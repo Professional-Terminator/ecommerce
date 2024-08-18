@@ -3,16 +3,16 @@
     "builds": [
       {
         "src": "angular.json",
-        "use": "@vercel/angular",
+        "use": "@vercel/static-build",
         "config": {
           "distDir": "dist/ecommerce_frontend"
         }
       }
     ],
-    "rewrites": [
+    "routes": [
       {
-        "source": "/(.*)",
-        "destination": "/index.html"
+        "src": "/(.*)",
+        "dest": "/index.html"
       }
     ],
     "cleanUrls": true,
