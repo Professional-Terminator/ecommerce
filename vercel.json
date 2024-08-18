@@ -3,7 +3,10 @@
     "builds": [
       {
         "src": "angular.json",
-        "use": "@vercel/angular"
+        "use": "@vercel/angular",
+        "config": {
+          "distDir": "dist/your-angular-app"
+        }
       }
     ],
     "routes": [
@@ -15,13 +18,8 @@
         "dest": "/index.html"
       }
     ],
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/api/$1"
-      }
-    ],
     "outputDirectory": "dist/ecommerce_frontend",
+    "buildCommand": "ng build",
     "cleanUrls": true,
     "trailingSlash": false
   }
