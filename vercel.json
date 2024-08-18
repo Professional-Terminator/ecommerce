@@ -1,14 +1,14 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "angular.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist/ecommerce_frontend"
-        }
+   "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/ecommerce_frontend"
       }
-    ],
+    }
+  ],
     "rewrites": [
         {
           "source": "/(.*)",
