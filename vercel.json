@@ -5,21 +5,16 @@
         "src": "angular.json",
         "use": "@vercel/angular",
         "config": {
-          "distDir": "dist/your-angular-app"
+          "distDir": "dist/ecommerce_frontend"
         }
       }
     ],
-    "routes": [
+    "rewrites": [
       {
-        "handle": "filesystem"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ],
-    "outputDirectory": "dist/ecommerce_frontend",
-    "buildCommand": "ng build",
     "cleanUrls": true,
     "trailingSlash": false
   }
