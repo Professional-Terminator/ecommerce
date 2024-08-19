@@ -20,15 +20,16 @@
         {
           "source": "/(.*)",
           "destination": "/index.html"
+        },
+        {
+            {
+                "source":"/(.*)",
+                "destination": "api/json-server.js"
+            }
         }
         
       ],
-      "routes":[
-        {
-            "src":"/(.*)",
-            "dest": "api/json-server.js"
-        }
-      ],
+      
     "cleanUrls": true,
     "trailingSlash": false
   }
