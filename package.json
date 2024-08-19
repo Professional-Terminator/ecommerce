@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "serve-json": "json-server --watch db.json",
     "test": "ng test"
+    
   },
   "private": true,
   "dependencies": {
