@@ -7,7 +7,7 @@ server.use(middlewares);
 server.use(router);
 server.use(
     jsonServer.rewriter({
-        "/*":"/$1",
+        "/api/*":"/$1",
     })
 );
 server.listen(3000,()=>{

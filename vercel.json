@@ -9,7 +9,7 @@
       }
     },
     {
-        "src": "api/json-server.js",
+        "src": "./api/json-server.js",
         "use": "@vercel/node",
         "config":{
             "includeFiles":["db.json"]
@@ -18,13 +18,13 @@
   ],
     "rewrites": [
         {
-          "source": "/(.*)",
+          "source": "/api/(.*)",
           "destination": "/index.html"
         },
         {
             
                 "source":"/(.*)",
-                "destination": "api/json-server.js"
+                "destination": "./api/json-server.js"
             
         }
         
