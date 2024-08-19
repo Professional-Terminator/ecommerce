@@ -9,7 +9,7 @@
         }
       },
       {
-        "src": "./api/json-server.js",
+        "src": "api/json-server.js",
         "use": "@vercel/node",
         "config": {
           "includeFiles": ["db.json"]
