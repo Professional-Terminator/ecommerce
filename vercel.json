@@ -10,18 +10,24 @@
     },
     {
         "src": "api/json-server.js",
-        "use": "@vercel/node"
+        "use": "@vercel/node",
+        "config":{
+            "includeFiles":["db.json"]
+        }
       }
   ],
     "rewrites": [
         {
           "source": "/(.*)",
           "destination": "/index.html"
-        },
+        }
+        
+      ],
+      "routes":[
         {
-            "source": "/api/(.*)",
-            "destination": "/api/json-server.js"
-          }
+            "src":"/(.*)",
+            "dest": "api/json-server.js"
+        }
       ],
     "cleanUrls": true,
     "trailingSlash": false

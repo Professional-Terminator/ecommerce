@@ -1,13 +1,12 @@
 {
-  "admin":[
+  "admin": [
     {
-      "id":"123asd456fgh",
-      "name":"saqib",
+      "id": "123asd456fgh",
+      "name": "saqib",
       "email": "saqib@test.com",
       "password": "saqib@123"
     }
   ],
-
   "category": [
     {
       "id": "123123124",
@@ -18,8 +17,8 @@
       "categoryName": "Snacks"
     },
     {
-      "id": "42afae5e-f455-4f28-b9e5-f75f8d393ea4",
-      "categoryName": "Oils"
+      "id": "1543b69c-ef01-4886-b43b-da41b53d5ed6",
+      "categoryName": "oils"
     }
   ],
   "brands": [
@@ -41,7 +40,12 @@
     {
       "id": "e4386e79-b6ff-4f81-9b67-3dc89749c0d8",
       "brandName": "KTC",
-      "categoryId": "42afae5e-f455-4f28-b9e5-f75f8d393ea4"
+      "categoryId": null
+    },
+    {
+      "id": "421fc09d-da46-44bb-8a1c-e73647304bca",
+      "brandName": "sultan",
+      "categoryId": "1543b69c-ef01-4886-b43b-da41b53d5ed6"
     }
   ],
   "products": [
