@@ -22,10 +22,10 @@
           "destination": "/index.html"
         },
         {
-            {
+            
                 "source":"/(.*)",
                 "destination": "api/json-server.js"
-            }
+            
         }
         
       ],
