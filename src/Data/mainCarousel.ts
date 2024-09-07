@@ -1,6 +1,9 @@
+
+
 export const homeCarouselData=[
     {
         image:"https://www.ethnicplus.in/media/mageplaza/bannerslider/banner/image/1/0/10_5.jpg",
+        // image: image1,
         // image:"https://orbitfb.co.uk/wp-content/uploads/2024/01/Untitled-design-3.png",
         path:"/women/clothing/lengha_choli"
     },
