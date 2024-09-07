@@ -9,7 +9,8 @@ import { Observable, forkJoin, map } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpServiceService {
-  private apiUrl = 'http://localhost:3000';
+  // private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://json-server-nine-kohl.vercel.app';
   private category = 'category';
   private brands = 'brands';
   private products = 'products';

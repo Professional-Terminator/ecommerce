@@ -2,7 +2,7 @@
   "name": "ecommerce-frontend",
   "version": "0.0.0",
   "scripts": {
-    "serve-json": "npx json-server --watch db.json",
+    "serve-json": "json-server --watch db.json",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
